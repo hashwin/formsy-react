@@ -129,7 +129,7 @@ export default (Component) => {
 
     // By default, we validate after the value has been set.
     // A user can override this and pass a second parameter of `false` to skip validation.
-    setValue = (value, validate = true) => {
+    setValue = (value, validate = false) => {
       if (!validate) {
         this.setState({
           value,
