@@ -38,6 +38,8 @@ export default {
       return a.toString() === b.toString();
     } else if (typeof a === 'object' && a !== null && b !== null) {
       return !this.objectsDiffer(a, b);
+    } else if ((a === undefined && b === null) || (a === null && b === undefined)) {
+      return false;
     }
 
     return a === b;
@@ -80,11 +82,7 @@ export default {
           }
           return;
         } else if (typeof validations[validationMethod] !== 'function') {
-          const validation = validationRules[validationMethod](
-            currentValues,
-            value,
-            validations[validationMethod],
-          );
+          const validation = validationRules[validationMethod](currentValues, value, validations[validationMethod]);
 
           if (typeof validation === 'string') {
             results.errors.push(validation);
