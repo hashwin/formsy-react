@@ -1,6 +1,6 @@
 {
-  "name": "formsy-react",
-  "version": "1.1.5",
+  "name": "@hashwin/formsy-react",
+  "version": "2.2.0",
   "description": "A form input builder and validator for React",
   "keywords": [
     "form",
