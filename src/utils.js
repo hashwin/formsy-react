@@ -34,8 +34,6 @@ export default {
       return !this.arraysDiffer(a, b);
     } else if (typeof a === 'function') {
       return a.toString() === b.toString();
-    } else if (a !== null && b !== null && a instanceof Date && b instanceof Date) {
-      return a.toString() === b.toString();
     } else if (typeof a === 'object' && a !== null && b !== null) {
       return !this.objectsDiffer(a, b);
     } else if ((a === undefined && b === null) || (a === null && b === undefined)) {
