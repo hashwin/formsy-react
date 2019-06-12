@@ -28,7 +28,7 @@ export default {
   },
 
   isSame(a, b) {
-    if (a === undefined && b === null) {
+    if ((a === undefined && b === null) || (a === null && b === undefined)) {
       return true;
     } else if (typeof a !== typeof b) {
       return false;
@@ -80,11 +80,7 @@ export default {
           }
           return;
         } else if (typeof validations[validationMethod] !== 'function') {
-          const validation = validationRules[validationMethod](
-            currentValues,
-            value,
-            validations[validationMethod],
-          );
+          const validation = validationRules[validationMethod](currentValues, value, validations[validationMethod]);
 
           if (typeof validation === 'string') {
             results.errors.push(validation);
