@@ -28,7 +28,9 @@ export default {
   },
 
   isSame(a, b) {
-    if (typeof a !== typeof b) {
+    if (a === undefined && b === null) {
+      return true;
+    } else if (typeof a !== typeof b) {
       return false;
     } else if (Array.isArray(a) && Array.isArray(b)) {
       return !this.arraysDiffer(a, b);
@@ -36,8 +38,6 @@ export default {
       return a.toString() === b.toString();
     } else if (typeof a === 'object' && a !== null && b !== null) {
       return !this.objectsDiffer(a, b);
-    } else if (a === undefined && b === null) {
-      return true;
     }
 
     return a === b;
