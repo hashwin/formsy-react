@@ -1,15 +1,8 @@
 {
   "name": "formsy-react",
-  "version": "2.0.0-beta.1",
+  "version": "2.1.0",
   "description": "A form input builder and validator for React",
-  "keywords": [
-    "form",
-    "forms",
-    "formsy",
-    "react",
-    "react-component",
-    "validation"
-  ],
+  "keywords": ["form", "forms", "formsy", "react", "react-component", "validation"],
   "standard-version": {
     "skip": {
       "tag": true
@@ -23,9 +16,7 @@
     "url": "https://github.com/formsy/formsy-react.git"
   },
   "author": "Christian Alfoni",
-  "files": [
-    "lib"
-  ],
+  "files": ["lib"],
   "main": "lib/index.js",
   "scripts": {
     "build": "NODE_ENV=production webpack -p --config webpack.config.js && yarn run prepublish",
