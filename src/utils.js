@@ -36,6 +36,8 @@ export default {
       return a.toString() === b.toString();
     } else if (typeof a === 'object' && a !== null && b !== null) {
       return !this.objectsDiffer(a, b);
+    } else if (a === undefined && b === null) {
+      return true;
     }
 
     return a === b;
