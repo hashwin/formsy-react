@@ -212,7 +212,7 @@ class Formsy extends React.Component {
       this.inputs.push(component);
     }
 
-    this.validate(component);
+    // this.validate(component);
   }
 
   // Method put on each input component to unregister
@@ -224,7 +224,7 @@ class Formsy extends React.Component {
       this.inputs = this.inputs.slice(0, componentPos).concat(this.inputs.slice(componentPos + 1));
     }
 
-    this.validateForm();
+    // this.validateForm();
   }
 
   // Checks if the values have changed from their initial value
